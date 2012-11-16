@@ -1,5 +1,3 @@
-import sys
-seqargs = []
-for key,value in enumerate(sys.argv):
-    seqargs.append(value)
-print(len(seqargs))
+import os
+f = open(os.curdir + '/' + 'url.txt')
+print(f.read(),end='')

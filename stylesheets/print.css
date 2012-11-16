@@ -4,6 +4,7 @@ body {
   font: 16px;
   line-height: 1.5;
   font-family: monospace, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+  overflow-y:scroll;
 }
 
 /* General & 'Reset' Stuff */

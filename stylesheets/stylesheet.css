@@ -67,6 +67,7 @@ header h2 {
   display: inline-block;
   text-align: center;
   margin: 0;
+  outline:none;
 }
 
 /* Main Content

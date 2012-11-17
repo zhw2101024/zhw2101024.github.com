@@ -15,13 +15,47 @@
 
     <header>
     <div class="container">
-      <h1>猫叔的github博客</h1>
-      <h2></h2>
-
-      <section id="downloads">
-      <a href="http://zhw2101024.github.com" class="btn">首页</a>
-      <a href="http://zhw2101024.github.com/subsection/Git Page/index.html" class="btn">Git Page</a>
-      </section>
+      <div>
+        <h1>猫叔的github博客</h1>
+        <h2></h2>
+        <section id="downloads">
+          <a href="http://zhw2101024.github.com" class="btn">首页</a>
+          <a href="http://zhw2101024.github.com/subsection/Git Page/index.html" class="btn">Git Page</a>
+        </section>
+      </div>
+      <div style="width:150px;">
+      </div>
+      <div>
+        <span class="timeprompt">当前时间：</span><br />
+        <span id="currentDate"></span><br />
+        <span id="currentTime"></span><br />
+        <span>显示时间的代码在</span><a href="http://zhw2101024.github.com/subsection/Git Page/静态网页显示当前时间.html">这里</a><br />
+        <script type="text/javascript">
+          var weekDays = ['一','二','三','四','五','六','日'];
+          var current = new Date();
+          var year = current.getFullYear();
+          var month = current.getMonth();
+          var date = current.getDate();
+          var day = current.getDay();
+          var datestr = year + '年'+(month+1)+'月'+date+'日 星期'+weekDays[day - 1];
+          var dateobj = document.getElementById("currentDate");
+          dateobj.innerHTML = datestr;
+          var hours,minutes,seconds,timestr;
+          var timeobj = document.getElementById("currentTime");
+          function flushtime() {
+            var current = new Date();
+            hours = current.getHours();
+            minutes = current.getMinutes();
+            seconds = current.getSeconds();
+            timestr = hours + '时' + minutes + '分' + seconds + '秒 东' + tz + '区';
+            timeobj.innerHTML = timestr;
+          }
+          var tz = current.getTimezoneOffset() / -60;
+          flushtime();
+          timeobj.innerHTML = timestr;
+          setInterval(function() {flushtime();},1000);
+      </script>
+      </div>
     </div>
     </header>
 
@@ -32,38 +66,9 @@
       <h3>关于博主</h3>
 
       <p>博主建立这个博客是为了记录自己的“数字化生存”，希望多少作为这个数字时代的一个缩影，尽量各方面都涉及到。暂且先开个槽</p>
-      <p>本博客用的是github的静态网页服务，力求简单清爽，内容为王。为简单起见，将不考虑IE6的兼容性，这样也可以更加自如的使用html5和css3的新特性，建议用Firefox、chrome或者IE9等现代浏览器。</p>
+      <p>本博客用的是github的静态网页服务，力求简单清爽，内容为王。为简单起见，将不考虑IE6的兼容性，这样也可以更加自如的使用html5和css3的新特性，建议大家使用Firefox、chrome或者IE9等现代浏览器。</p>
       <p>由于众所周知的原因，不能下载jekyll，打算自己用python写一个静态网页生成器。正在看python3的官方文档</p>
-      <span class="timeprompt">当前时间：</span><br />
-      <span id="currentDate"></span><br />
-      <span id="currentTime"></span><br />
-      <span>显示时间的代码在</span><a href="http://zhw2101024.github.com/subsection/Git Page/静态网页显示当前时间.html">这里</a><br />
       <a target="_blank" href="http://zhw2101024.github.com/index_print.html">打印版本</a>
-      <script type="text/javascript">
-        var weekDays = ['一','二','三','四','五','六','日'];
-        var current = new Date();
-        var year = current.getFullYear();
-        var month = current.getMonth();
-        var date = current.getDate();
-        var day = current.getDay();
-        var datestr = year + '年'+(month+1)+'月'+date+'日 星期'+weekDays[day - 1];
-        var dateobj = document.getElementById("currentDate");
-        dateobj.innerHTML = datestr;
-        var hours,minutes,seconds,timestr;
-        var timeobj = document.getElementById("currentTime");
-        function flushtime() {
-          var current = new Date();
-          hours = current.getHours();
-          minutes = current.getMinutes();
-          seconds = current.getSeconds();
-          timestr = hours + '时' + minutes + '分' + seconds + '秒 东' + tz + '区';
-          timeobj.innerHTML = timestr;
-        }
-        var tz = current.getTimezoneOffset() / -60;
-        flushtime();
-        timeobj.innerHTML = timestr;
-        setInterval(function() {flushtime();},1000);
-      </script>
       <p style="display:none;">You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
       </section>
     </div>
@@ -71,7 +76,6 @@
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-36345785-1']);
       _gaq.push(['_trackPageview']);
-
       (function() {
        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';

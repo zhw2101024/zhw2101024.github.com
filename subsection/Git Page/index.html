@@ -24,13 +24,13 @@
         <span id="currentTime"></span><br />
         <span>显示时间的代码在</span><a href="http://zhw2101024.github.com/subsection/Git Page/静态网页显示当前时间.html">这里</a><br />
         <script type="text/javascript">
-          var weekDays = ['一','二','三','四','五','六','日'];
+          var weekDays = ['日','一','二','三','四','五','六'];
           var current = new Date();
           var year = current.getFullYear();
           var month = current.getMonth();
           var date = current.getDate();
           var day = current.getDay();
-          var datestr = year + '年'+(month+1)+'月'+date+'日 星期'+weekDays[day - 1];
+          var datestr = year + '年'+(month+1)+'月'+date+'日 星期'+weekDays[day];
           var dateobj = document.getElementById("currentDate");
           dateobj.innerHTML = datestr;
           var hours,minutes,seconds,timestr;

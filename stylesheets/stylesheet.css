@@ -66,6 +66,9 @@ header h2 {
   font-weight: 300;
   color: #666;
 }
+header .datearea {
+    padding-left:140px;
+}
 
 #downloads .btn {
   display: inline-block;

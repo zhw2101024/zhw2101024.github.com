@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset='utf-8'>
@@ -19,7 +20,8 @@
         <a href="http://zhw2101024.github.com/subsection/Git Page/index.html" class="btn">Git Page</a>
         </section>
       </div>
-      <div class="datearea">
+      <noscript id="noscript">您的浏览器可能不支持Javascript</noscript>
+      <div id="datearea">
         <span class="timeprompt">当前时间：</span><br />
         <span id="currentDate"></span><br />
         <span id="currentTime"></span><br />
@@ -31,7 +33,7 @@
           var month = current.getMonth();
           var date = current.getDate();
           var day = current.getDay();
-          var datestr = year + '年'+(month+1)+'月'+date+'日 星期'+weekDays[day];
+          var datestr = year + '年' + (month + 1) + '月' + date + '日 星期' + weekDays[day];
           var dateobj = document.getElementById("currentDate");
           dateobj.innerHTML = datestr;
           var hours,minutes,seconds,timestr;
@@ -48,6 +50,8 @@
           flushtime();
           timeobj.innerHTML = timestr;
           setInterval(function() {flushtime();},1000);
+          document.getElementById("datearea").style.display = "inline-block";
+          document.getElementById("noscript").style.display = "none";
         </script>
       </div>
     </div>
@@ -61,6 +65,9 @@
         页面头部的时间是用JavaScript实现的，显示当前时间，精确到秒并显示星期、时区。其实很简单，就是利用JavaScript内置的Date对象，然后用setInterval实现没秒钟刷新一次时间。
         代码如下：<br />
           <pre>
+&#60;span class="timeprompt"&#62;当前时间：&#60;/span&#62;&#60;br /&#62;
+&#60;span id="currentDate"&#62;&#60;/span&#62;&#60;br /&#62;
+&#60;span id="currentTime"&#62;&#60;/span&#62;&#60;br /&#62;
 &#60;script type="text/javascript"&#62;
   var weekDays = ['日','一','二','三','四','五','六'];
   var current = new Date();
@@ -68,7 +75,7 @@
   var month = current.getMonth();
   var date = current.getDate();
   var day = current.getDay();
-  var datestr = year + '年'+(month+1)+'月'+date+'日 星期'+weekDays[day];
+  var datestr = year + '年' + (month + 1) + '月' + date + '日 星期' + weekDays[day];
   var dateobj = document.getElementById("currentDate");
   dateobj.innerHTML = datestr;
   var hours,minutes,seconds,timestr;
@@ -85,7 +92,7 @@
   flushtime();
   timeobj.innerHTML = timestr;
   setInterval(function() {flushtime();},1000);
-&#60;/script>
+&#60;/script&#62;
           </pre>
         </p>
       </section>

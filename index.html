@@ -19,7 +19,8 @@
           <a href="http://zhw2101024.github.com/subsection/Git Page/index.html" class="btn">Git Page</a>
         </section>
       </div>
-      <div class="datearea">
+      <noscript id="noscript">您的浏览器可能不支持Javascript</noscript>
+      <div id="datearea">
         <span class="timeprompt">当前时间：</span><br />
         <span id="currentDate"></span><br />
         <span id="currentTime"></span><br />
@@ -48,6 +49,8 @@
           flushtime();
           timeobj.innerHTML = timestr;
           setInterval(function() {flushtime();},1000);
+          document.getElementById("datearea").style.display = "inline-block";
+          document.getElementById("noscript").style.display = "none";
         </script>
       </div>
     </div>

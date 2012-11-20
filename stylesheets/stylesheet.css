@@ -5,7 +5,7 @@ body {
   color: #eaeaea;
   font: 16px;
   line-height: 1.5;
-  font-family: monospace, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
+  font-family: sans-serif, monospace, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   overflow-y:scroll;
 }
 

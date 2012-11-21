@@ -11,7 +11,7 @@ body {
 
 /* General & 'Reset' Stuff */
 
-.container, .motto {
+.container {
   padding: 0 30%;
   margin: 0 auto;
 }
@@ -45,6 +45,7 @@ h2       - project description
 
 header .container > div {
   display: inline-block;
+  vertical-align: top;
 }
 
 header h1 {
@@ -74,6 +75,10 @@ header noscript {
 #datearea {
   padding-left: 20%;
   display: none;
+}
+
+#menu {
+  margin: 0;
 }
 
 #menu .btn {
@@ -267,7 +272,7 @@ a, a:hover, a:visited
 }
 
 @media only screen and (max-width:1440px) {
-  .container, .motto {
+  .container, #menu {
     padding: 0 25%;
   }
   #datearea {
@@ -275,7 +280,7 @@ a, a:hover, a:visited
   }
 }
 @media only screen and (max-width:1280px) {
-  .container, .motto {
+  .container, #menu {
     padding: 0 20%;
   }
   #datearea {
@@ -286,7 +291,7 @@ a, a:hover, a:visited
   header h1 {
     font-size: 1.6em;
   }
-  .container .motto {
+  .container, #menu {
     padding: 0 16%;
   }
   #datearea {
@@ -294,7 +299,7 @@ a, a:hover, a:visited
   }
 }
 @media only screen and (max-width:800px) {
-  .container, .motto {
+  .container, #menu {
     padding: 0 12%;
   }
   #datearea {
@@ -302,7 +307,7 @@ a, a:hover, a:visited
   }
 }
 @media only screen and (max-width:640px) {
-  .container, .motto {
+  .container, #menu {
     padding: 0;
   }
   #datearea {

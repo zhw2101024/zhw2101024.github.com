@@ -76,6 +76,10 @@ header noscript {
   display: none;
 }
 
+@media screen and (max-device-width: 800px) {
+  display: none;
+}
+
 #menu .btn {
   display: inline-block;
   text-align: center;

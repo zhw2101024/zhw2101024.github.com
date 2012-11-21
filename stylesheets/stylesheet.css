@@ -77,6 +77,7 @@ header noscript {
 }
 
 @media screen and (max-device-width: 800px) {
+  color: red;
   padding-left: 0;
   display: none;
 }

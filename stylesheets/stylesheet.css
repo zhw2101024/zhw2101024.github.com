@@ -6,20 +6,19 @@ body {
   font: 16px;
   line-height: 1.5;
   font-family: sans-serif, monospace, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 /* General & 'Reset' Stuff */
 
 .container {
-  width: 90%;
-  max-width: 600px;
+  padding: 0 30%;
   margin: 0 auto;
 }
 
 section {
   display: block;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +44,7 @@ h2       - project description
 }
 
 header .container > div {
-  display:inline-block;
+  display: inline-block;
 }
 
 header h1 {
@@ -73,15 +72,15 @@ header noscript {
 }
 
 #datearea {
-  padding-left:7.5em;
-  display:none;
+  padding-left: 20%;
+  display: none;
 }
 
 #menu .btn {
   display: inline-block;
   text-align: center;
   margin: 0;
-  outline:none;
+  outline: none;
 }
 
 /* Main Content
@@ -93,7 +92,7 @@ header noscript {
 }
 
 #main_content > span {
-  color:#AA9900;
+  color: #AA9900;
 }
 
 section img {
@@ -140,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main_content .path a {
-  color:#76A385
+  color: #76A385
 }
 
 dt {

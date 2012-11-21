@@ -11,7 +11,7 @@ body {
 
 /* General & 'Reset' Stuff */
 
-.container {
+.container, .motto {
   padding: 0 30%;
   margin: 0 auto;
 }
@@ -91,7 +91,16 @@ header noscript {
     -webkit-font-smoothing: antialiased;
 }
 
-#main_content > span {
+#main_content div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#main_content .left {
+  width:64%;
+}
+
+#main_content .left > span {
   color: #AA9900;
 }
 
@@ -258,7 +267,7 @@ a, a:hover, a:visited
 }
 
 @media only screen and (max-width:1440px) {
-  .container {
+  .container, .motto {
     padding: 0 25%;
   }
   #datearea {
@@ -266,7 +275,7 @@ a, a:hover, a:visited
   }
 }
 @media only screen and (max-width:1280px) {
-  .container {
+  .container, .motto {
     padding: 0 20%;
   }
   #datearea {
@@ -277,7 +286,7 @@ a, a:hover, a:visited
   header h1 {
     font-size: 1.6em;
   }
-  .container {
+  .container .motto {
     padding: 0 16%;
   }
   #datearea {
@@ -285,7 +294,7 @@ a, a:hover, a:visited
   }
 }
 @media only screen and (max-width:800px) {
-  .container {
+  .container, .motto {
     padding: 0 12%;
   }
   #datearea {
@@ -293,7 +302,7 @@ a, a:hover, a:visited
   }
 }
 @media only screen and (max-width:640px) {
-  .container {
+  .container, .motto {
     padding: 0;
   }
   #datearea {

@@ -15,7 +15,7 @@
       <div>
         <h1>猫叔的github博客</h1>
         <h2></h2>
-        <section id="downloads">
+        <section id="menu">
         <a href="http://zhw2101024.github.com" class="btn">首页</a>
         <a href="http://zhw2101024.github.com/subsection/Git Page/index.html" class="btn">Git Page</a>
         </section>
@@ -38,6 +38,7 @@
           dateobj.innerHTML = datestr;
           var hours,minutes,seconds,timestr;
           var timeobj = document.getElementById("currentTime");
+          var tz = current.getTimezoneOffset() / -60;
           function flushtime() {
             var current = new Date();
             hours = current.getHours();
@@ -46,7 +47,6 @@
             timestr = hours + '时' + minutes + '分' + seconds + '秒 东' + tz + '区';
             timeobj.innerHTML = timestr;
           }
-          var tz = current.getTimezoneOffset() / -60;
           flushtime();
           timeobj.innerHTML = timestr;
           setInterval(function() {flushtime();},1000);
@@ -55,16 +55,19 @@
         </script>
       </div>
     </div>
+    <div class="motto">
+      <span>座右铭：</span><a href="http://heikezhi.com/2012/05/01/5-things-you-should-always-remember/">不要忘记梦想，别太拼命工作，忠于自己，珍惜友情，保持开心</a>
+    </div>
     </header>
-
     <div class="container">
       <section id="main_content">
-      <p class="path"><a href="http://zhw2101024.github.com/subsection/Git Page/index.html">Git Page</a>&nbsp;|&nbsp;<a href="http://zhw2101024.github.com/subsection/Git Page/静态网页显示当前时间.html">静态网页显示当前时间</a></p>
-        <h2>静态网页显示当前时间</h2>
-        <p>
-        页面头部的时间是用JavaScript实现的，显示当前时间，精确到秒并显示星期、时区。其实很简单，就是利用JavaScript内置的Date对象，然后用setInterval实现没秒钟刷新一次时间。
-        代码如下：<br />
-          <pre>
+        <div class="left">
+          <p class="path"><a href="http://zhw2101024.github.com/subsection/Git Page/index.html">Git Page</a>&nbsp;|&nbsp;<a href="http://zhw2101024.github.com/subsection/Git Page/静态网页显示当前时间.html">静态网页显示当前时间</a></p>
+          <h2>静态网页显示当前时间</h2>
+          <p>
+          页面头部的时间是用JavaScript实现的，显示当前时间，精确到秒并显示星期、时区。其实很简单，就是利用JavaScript内置的Date对象，然后用setInterval实现没秒钟刷新一次时间。
+          代码如下：<br />
+            <pre>
 &#60;span class="timeprompt"&#62;当前时间：&#60;/span&#62;&#60;br /&#62;
 &#60;span id="currentDate"&#62;&#60;/span&#62;&#60;br /&#62;
 &#60;span id="currentTime"&#62;&#60;/span&#62;&#60;br /&#62;
@@ -80,6 +83,7 @@
   dateobj.innerHTML = datestr;
   var hours,minutes,seconds,timestr;
   var timeobj = document.getElementById("currentTime");
+  var tz = current.getTimezoneOffset() / -60;
   function flushtime() {
     var current = new Date();
     hours = current.getHours();
@@ -88,13 +92,15 @@
     timestr = hours + '时' + minutes + '分' + seconds + '秒 东' + tz + '区';
     timeobj.innerHTML = timestr;
   }
-  var tz = current.getTimezoneOffset() / -60;
   flushtime();
   timeobj.innerHTML = timestr;
   setInterval(function() {flushtime();},1000);
 &#60;/script&#62;
-          </pre>
-        </p>
+            </pre>
+          </p>
+        </div>
+        <div class="right">
+        </div>
       </section>
     </div>
   </body>
